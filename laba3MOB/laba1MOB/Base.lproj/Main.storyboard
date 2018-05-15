@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iqQ-U7-CNV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="9Yk-9I-5sa">
+            <objects>
+                <viewController storyboardIdentifier="homeStoryboard" id="iqQ-U7-CNV" customClass="HomeViewController" customModule="laba1MOB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOn-xj-wHn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-R6-A82">
+                                <rect key="frame" x="0.0" y="569" width="375" height="98"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="9Nb-yB-ssw" kind="embed" id="Qqc-cj-z2T"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="showChooser" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry2-Hu-5bc">
+                                <rect key="frame" x="74" y="291" width="226" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89250942580559567" green="0.91616742227979275" blue="0.9115934876950168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show Chooser"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="mEa-ou-ago"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hRj-sW-Cwy"/>
+                    </view>
+                    <connections>
+                        <outlet property="showChooserOutlet" destination="ry2-Hu-5bc" id="yej-p2-tdn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mwe-H6-WwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743.20000000000005" y="32.833583208395808"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="labStoryboard" id="BYZ-38-t0r" customClass="ViewController" customModule="laba1MOB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NJb-u8-a7i">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-Wh-xAw">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="FPA-7U-AtE"/>
+                                        </constraints>
+                                        <state key="normal" title="Choose you pet">
+                                            <color key="titleColor" red="0.99150584109999995" green="1" blue="0.94704909869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kqp-ZS-0PX"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvI-2l-fGn">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.50199127266827426" green="0.91585979487044444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="uiL-IL-Uac"/>
+                                        </constraints>
+                                        <state key="normal" title="Cat">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuItemsActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsq-TC-H4u"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMB-ky-Yus">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.50199127266827426" green="0.91585979487044444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UZe-1e-fAQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Doge">
+                                            <color key="titleColor" red="0.023639896373056968" green="0.023639896373056968" blue="0.023639896373056968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuItemsActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JjM-dt-17U"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVb-Oc-K8H">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.50199127266827426" green="0.91585979487044444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8wX-GX-uKr"/>
+                                        </constraints>
+                                        <state key="normal" title="Mouse">
+                                            <color key="titleColor" red="0.023639896373056968" green="0.023639896373056968" blue="0.023639896373056968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuItemsActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4fp-5r-ZbL"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8R-IZ-YaC">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.50199127266827426" green="0.91585979487044444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Uxe-Rf-jRJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Hamster">
+                                            <color key="titleColor" red="0.023639896373056968" green="0.023639896373056968" blue="0.023639896373056968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuItemsActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zl9-Vu-Epf"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQp-73-Bip">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.50199127266827426" green="0.91585979487044444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gol-Xm-FHY"/>
+                                        </constraints>
+                                        <state key="normal" title="Chupakabra">
+                                            <color key="titleColor" red="0.023639896373056968" green="0.023639896373056968" blue="0.023639896373056968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuItemsActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z04-ct-2xI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="A8R-IZ-YaC" firstAttribute="leading" secondItem="NJb-u8-a7i" secondAttribute="leading" id="48x-gc-aK7"/>
+                                    <constraint firstAttribute="trailing" secondItem="qdS-Wh-xAw" secondAttribute="trailing" id="6RZ-wN-6F2"/>
+                                    <constraint firstItem="qdS-Wh-xAw" firstAttribute="leading" secondItem="NJb-u8-a7i" secondAttribute="leading" id="9hQ-2e-WQX"/>
+                                    <constraint firstAttribute="trailing" secondItem="vMB-ky-Yus" secondAttribute="trailing" id="9ve-qM-IbW"/>
+                                    <constraint firstItem="BvI-2l-fGn" firstAttribute="leading" secondItem="NJb-u8-a7i" secondAttribute="leading" id="Ij0-66-CNR"/>
+                                    <constraint firstAttribute="trailing" secondItem="BvI-2l-fGn" secondAttribute="trailing" id="JGc-gY-8jE"/>
+                                    <constraint firstItem="BQp-73-Bip" firstAttribute="leading" secondItem="NJb-u8-a7i" secondAttribute="leading" id="ZD9-yP-ugg"/>
+                                    <constraint firstItem="vMB-ky-Yus" firstAttribute="leading" secondItem="NJb-u8-a7i" secondAttribute="leading" id="azK-f4-QGu"/>
+                                    <constraint firstAttribute="trailing" secondItem="UVb-Oc-K8H" secondAttribute="trailing" id="b4o-Zg-LLs"/>
+                                    <constraint firstItem="UVb-Oc-K8H" firstAttribute="leading" secondItem="NJb-u8-a7i" secondAttribute="leading" id="fDF-zk-2uw"/>
+                                    <constraint firstAttribute="trailing" secondItem="A8R-IZ-YaC" secondAttribute="trailing" id="i4S-0Y-oQy"/>
+                                    <constraint firstAttribute="trailing" secondItem="BQp-73-Bip" secondAttribute="trailing" id="sJk-ff-RI5"/>
+                                </constraints>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEv-Zr-i8S">
+                                <rect key="frame" x="0.0" y="569" width="375" height="98"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="9Nb-yB-ssw" kind="embed" id="Kq8-OU-WaS"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1H-MX-5Oe">
+                                <rect key="frame" x="16" y="126" width="343" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY8-0l-nB8">
+                                <rect key="frame" x="16" y="97" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-bU-zfZ">
+                                <rect key="frame" x="16" y="477" width="343" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Check file"/>
+                                <connections>
+                                    <action selector="checkFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pn4-F3-LQf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJb-u8-a7i" secondAttribute="trailing" id="CBY-sM-VyK"/>
+                            <constraint firstItem="NJb-u8-a7i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sKN-LM-H0N"/>
+                            <constraint firstItem="NJb-u8-a7i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uft-tq-0a4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelPet" destination="oY8-0l-nB8" id="9ZF-zS-T84"/>
+                        <outlet property="menuOutlet" destination="qdS-Wh-xAw" id="kmd-eS-QJv"/>
+                        <outlet property="myImageView" destination="Z1H-MX-5Oe" id="Pye-5U-5v0"/>
+                        <outletCollection property="menuItemsOutlets" destination="BvI-2l-fGn" collectionClass="NSMutableArray" id="SpR-3J-D7K"/>
+                        <outletCollection property="menuItemsOutlets" destination="vMB-ky-Yus" collectionClass="NSMutableArray" id="v5m-eZ-dJl"/>
+                        <outletCollection property="menuItemsOutlets" destination="UVb-Oc-K8H" collectionClass="NSMutableArray" id="xc2-0A-Tkt"/>
+                        <outletCollection property="menuItemsOutlets" destination="A8R-IZ-YaC" collectionClass="NSMutableArray" id="RXq-ak-ZZs"/>
+                        <outletCollection property="menuItemsOutlets" destination="BQp-73-Bip" collectionClass="NSMutableArray" id="ZV7-1Q-JmT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="32.833583208395808"/>
+        </scene>
+        <!--Content View-->
+        <scene sceneID="kFZ-i2-I6y">
+            <objects>
+                <viewController id="9Nb-yB-ssw" customClass="ContentView" customModule="laba1MOB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hY-Wb-QKu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvx-FP-98Q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80386182322480748" green="0.82517001295336789" blue="0.82105037982869788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="HOME"/>
+                                <connections>
+                                    <action selector="homeButton:" destination="9Nb-yB-ssw" eventType="touchUpInside" id="CQj-mM-NIk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="70c-di-DEZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sy-UO-sCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816.79999999999995" y="-223.08845577211397"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kq8-OU-WaS"/>
+    </inferredMetricsTieBreakers>
+</document>
