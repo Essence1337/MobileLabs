@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqs-Dn-9lR">
+                                <rect key="frame" x="150" y="197" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Music"/>
+                                <connections>
+                                    <segue destination="WwU-bc-4XE" kind="showDetail" id="Ivf-6E-g7H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKk-vQ-eaZ">
+                                <rect key="frame" x="151" y="385" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Video"/>
+                                <connections>
+                                    <segue destination="Dn2-ML-Btx" kind="showDetail" id="BP2-cB-ixT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="192"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="dui-tL-0K4">
+            <objects>
+                <viewController id="Dn2-ML-Btx" customClass="VideoViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kU7-dF-Yjl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCf-pP-kQ3">
+                                <rect key="frame" x="139" y="50" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-K0-L2o">
+                                <rect key="frame" x="0.0" y="593" width="375" height="78"/>
+                                <color key="backgroundColor" red="1" green="0.63009447136576568" blue="0.36854418120910548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="OqC-V6-phV"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnU-OF-45D">
+                                <rect key="frame" x="16" y="79" width="343" height="275"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="KVS-y7-lcf"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TV5-K0-L2o" secondAttribute="bottom" id="6Bp-jV-SDU"/>
+                            <constraint firstItem="TV5-K0-L2o" firstAttribute="trailing" secondItem="BZs-Mo-2io" secondAttribute="trailing" id="AUo-el-XI7"/>
+                            <constraint firstItem="NCf-pP-kQ3" firstAttribute="leading" secondItem="BZs-Mo-2io" secondAttribute="leading" constant="139" id="AYu-lg-Pwa"/>
+                            <constraint firstItem="TV5-K0-L2o" firstAttribute="top" secondItem="mnU-OF-45D" secondAttribute="bottom" constant="239" id="MJg-1E-o2S"/>
+                            <constraint firstItem="mnU-OF-45D" firstAttribute="top" secondItem="NCf-pP-kQ3" secondAttribute="bottom" constant="8" symbolic="YES" id="UVh-Wf-h7X"/>
+                            <constraint firstItem="TV5-K0-L2o" firstAttribute="leading" secondItem="BZs-Mo-2io" secondAttribute="leading" id="g7y-75-wan"/>
+                            <constraint firstItem="mnU-OF-45D" firstAttribute="leading" secondItem="kU7-dF-Yjl" secondAttribute="leadingMargin" id="l9Y-zu-MB1"/>
+                            <constraint firstItem="NCf-pP-kQ3" firstAttribute="top" secondItem="BZs-Mo-2io" secondAttribute="top" constant="30" id="qLP-3s-aco"/>
+                            <constraint firstItem="mnU-OF-45D" firstAttribute="centerX" secondItem="NCf-pP-kQ3" secondAttribute="centerX" id="qac-TV-Av2"/>
+                            <constraint firstItem="BZs-Mo-2io" firstAttribute="trailing" secondItem="NCf-pP-kQ3" secondAttribute="trailing" constant="140" id="rjD-rv-WOe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BZs-Mo-2io"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoDisplay" destination="mnU-OF-45D" id="OLY-LA-mqr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqy-aG-nX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.5999999999999" y="489.80509745127438"/>
+        </scene>
+        <!--Music View Controller-->
+        <scene sceneID="dxb-6Q-8il">
+            <objects>
+                <viewController id="WwU-bc-4XE" customClass="MusicViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogm-lp-SIH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syo-ct-Jq2">
+                                <rect key="frame" x="139" y="50" width="97" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Music Player">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsJ-ss-1pg">
+                                <rect key="frame" x="0.0" y="589" width="375" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.63009447139999997" blue="0.36854418119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="homePressed:" destination="WwU-bc-4XE" eventType="touchUpInside" id="88M-QE-Kkn"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="YWH-QN-zed"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf0-jX-vx9">
+                                <rect key="frame" x="145" y="425" width="85" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.63009447139999997" blue="0.36854418119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPressed:" destination="WwU-bc-4XE" eventType="touchUpInside" id="syr-pT-5Ng"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKu-r1-C7g">
+                                <rect key="frame" x="16" y="424" width="85" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.63009447139999997" blue="0.36854418119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pausePressed:" destination="WwU-bc-4XE" eventType="touchUpInside" id="csE-OB-Vd4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQw-z2-3L0">
+                                <rect key="frame" x="274" y="424" width="85" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.63009447139999997" blue="0.36854418119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopPressed:" destination="WwU-bc-4XE" eventType="touchUpInside" id="4AO-pR-ruO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrt-P9-EGN">
+                                <rect key="frame" x="0.0" y="325" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcP-wO-X48">
+                                <rect key="frame" x="0.0" y="296" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yhx-lZ-ube" firstAttribute="trailing" secondItem="syo-ct-Jq2" secondAttribute="trailing" constant="139" id="4LX-8x-9D4"/>
+                            <constraint firstItem="FcP-wO-X48" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yhx-lZ-ube" secondAttribute="leading" id="4qi-YR-d8o"/>
+                            <constraint firstItem="Yhx-lZ-ube" firstAttribute="trailing" secondItem="zrt-P9-EGN" secondAttribute="trailing" id="ERF-xx-R8x"/>
+                            <constraint firstItem="FcP-wO-X48" firstAttribute="centerX" secondItem="Yhx-lZ-ube" secondAttribute="centerX" id="F84-Lb-8Jl"/>
+                            <constraint firstItem="syo-ct-Jq2" firstAttribute="top" secondItem="Yhx-lZ-ube" secondAttribute="top" constant="30" id="JE9-Ps-uwu"/>
+                            <constraint firstItem="FcP-wO-X48" firstAttribute="top" secondItem="syo-ct-Jq2" secondAttribute="bottom" constant="225" id="KfZ-Tr-Khg"/>
+                            <constraint firstItem="syo-ct-Jq2" firstAttribute="leading" secondItem="Yhx-lZ-ube" secondAttribute="leading" constant="139" id="SWa-tv-srn"/>
+                            <constraint firstItem="zrt-P9-EGN" firstAttribute="leading" secondItem="Yhx-lZ-ube" secondAttribute="leading" id="UwB-Oc-85x"/>
+                            <constraint firstItem="zrt-P9-EGN" firstAttribute="top" secondItem="FcP-wO-X48" secondAttribute="bottom" constant="8" id="wOu-gn-V9K"/>
+                            <constraint firstItem="Yhx-lZ-ube" firstAttribute="trailing" secondItem="FcP-wO-X48" secondAttribute="trailing" id="x6W-MG-Ubq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yhx-lZ-ube"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayLbl" destination="zrt-P9-EGN" id="LqN-cd-G0E"/>
+                        <outlet property="titleLbl" destination="FcP-wO-X48" id="qb5-4W-EOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2D-S3-yb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.5999999999999" y="-212.74362818590706"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OqC-V6-phV"/>
+    </inferredMetricsTieBreakers>
+</document>
